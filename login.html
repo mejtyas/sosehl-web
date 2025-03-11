@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .error {
+            color: red;
+            display: none;
+        }
+        .confirmation-section {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="email">Enter your email:</label><br>
+        <input type="email" id="email" placeholder="example@sosehl.onmicrosoft.com"><br>
+        <span id="error" class="error">Email must end with @sosehl.onmicrosoft.com</span><br>
+        <button onclick="sendConfirmation()">Send Confirmation Code</button>
+    </div>
+    <div id="confirmation-section" class="confirmation-section">
+        <label for="code">Enter Confirmation Code:</label><br>
+        <input type="text" id="code" placeholder="Enter code"><br>
+        <button onclick="verifyCode()">Verify</button>
+        <span id="result"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
